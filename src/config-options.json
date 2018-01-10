@@ -152,6 +152,7 @@
     "includePrintingAreaInDesign",
     "unit2",
     "zoomEnabled",
+    "enableQuantity",
     "unit"
   ],
   "type": "object",
