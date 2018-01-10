@@ -122,7 +122,8 @@
     },
     "enableQuantity": {
       "type": "boolean",
-      "meta-example": true
+      "meta-example": true,
+      "meta-default": true
     },
     "copyToBack ": {
       "type": "boolean",
