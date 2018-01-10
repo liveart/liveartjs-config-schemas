@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "config.options",
+  "properties": {
+    "checkTextFXThrottle": {
+      "type": "number",
+      "meta-description": "Delay in *milliseconds* for typing text events, before LiveArt will trigger a server script to obtain new image for certain raster effect.",
+      "meta-example": 400,
+      "meta-default": 400
+    },
+    "checkeredBackground": {
+      "type": "boolean",
+      "meta-description": "If enabled, shows checkered background where no product background is rendered. The asset for background is located in assets/img/bg-fill.png.",
+      "meta-example": true,
+      "meta-default": true
+    },
+    "deleteOnDoubleClick": {
+      "type": "boolean",
+      "meta-description": "Defines whether user can remove any object from working area by simple double-click or double tap (for mobile devices).",
+      "meta-example": false,
+      "meta-default": false
+    },
+    "enableSnapGuides": {
+      "type": "boolean",
+      "meta-description": "Enables snapping objects while dragging to another objects, editable area center or sides. Also helps to set object's rotation angle to 0°, 90°, 180°, and 270°. *Added to v0.10.17.*",
+      "meta-example": true,
+      "meta-default": true
+    },
+    "fitProductImage": {
+      "type": "boolean",
+      "meta-description": "Defines if product images should be fitted and centered in the canvas. Small product images are only centered. Editable Area coordinates are still bound to the canvas dimensions (not product image). *Added to v0.10.5*.",
+      "meta-example": false,
+      "meta-default": false
+    },
+    "fitEditableArea": {
+      "type": "boolean",
+      "meta-example": false,
+      "meta-default": false
+    },
+    "showSuitableProductColorize": {
+      "type": "boolean",
+      "meta-example": false,
+      "meta-default": false
+    },
+    "fontsCSSUrl": {
+      "type": "string",
+      "meta-description": "URL to the location of the fonts CSS definitions that will be available for the user. Used for a stand-alone SVG preview (for proper text fonts rendering in browser).",
+      "meta-example": "/fonts/fonts.css",
+      "meta-default": "\"\""
+    },
+    "includeMaskInDesign": {
+      "type": "boolean",
+      "meta-description": "Defines whether product locations mask are included in the output mockup of design. **Warning**: *true* is recommended, otherwise image will be hidden (display=\"none\"), but some software (e.g. ImageMagic) will ignore this fact. Alternative way — remove manually node with id=\"productMask\"",
+      "meta-example": false,
+      "meta-default": false
+    },
+    "includePrintingAreaInDesign": {
+      "type": "boolean",
+      "meta-description": "Defines whether constraints of an area available for printing are included in the output mockup of design.",
+      "meta-example": false,
+      "meta-default": false
+    },
+    "includeProductInDesign": {
+      "type": "boolean",
+      "meta-description": "Defines whether product background image is included into output mockup of the design. **Warning**: *true* is a recommended value, otherwise image will be hidden (display=\"none\"), but some software (e.g. ImageMagic) will ignore this fact.Alternate way — remove manually node with id=\"productImage\".",
+      "meta-example": false,
+      "meta-default": false
+    },
+    "minDPU": {
+      "type": "number",
+      "meta-description": "Warning message that will be shown to a user on raster image resize more than safe dimensions to meet suggested print quality standards. Also this feature requires *editableArea* and *editableAreaUnits* (see *Product Location Object*) for each product location to use this feature (for correct unit/pixel ratio). Warning message is configured in html (‘#dpu-exceeded-popup’). If user ignores such warning and continues design editing - on Place Order will fire additional pop-up. Also may be re-defined for certain products (see *Product Object*).",
+      "meta-example": 0,
+      "meta-default": 0
+    },
+    "minZoom": {
+      "type": "number",
+      "meta-description": "Defines min value for zoom control, will be used as percents.",
+      "meta-example": 50,
+      "meta-default": 50
+    },
+    "maxZoom": {
+      "type": "number",
+      "meta-description": "Defines max value for zoom control, will be used as percents.",
+      "meta-example": 150,
+      "meta-default": 150
+    },
+    "zoomStep": {
+      "type": "number",
+      "meta-description": "Defines step for zoom control, will be used as percents.",
+      "meta-example": 10,
+      "meta-default": 10
+    },
+    "showProductSelector": {
+      "type": "boolean",
+      "meta-description": "Defines whether Select Product form is shown. If false, make sure you indicate the *meta-defaultProductId* to preload the product.",
+      "meta-example": true,
+      "meta-default": true
+    },
+    "showUploadedColorsDialog": {
+      "type": "boolean",
+      "meta-description": "Defines whether to show a pop-up with color choices for uploaded image (meta-default palette and 'Process Colors' checkbox). If *false*, uploaded images are treated as 'Process Colors'.",
+      "meta-example": true,
+      "meta-default": true
+    },
+    "unit": {
+      "type": "string",
+      "meta-description": "Units shown for custom sizes products.",
+      "meta-example": "in",
+      "meta-default": "\"\""
+    },
+    "unit2": {
+      "type": "string",
+      "meta-description": "Units shown for custom sizes products.",
+      "meta-example": "ft",
+      "meta-default": "\"\""
+    },
+    "unitConversionMult": {
+      "type": "number",
+      "meta-description": "Indicates respective multiplier for proper conversion of unit to unit2.",
+      "meta-example": 10,
+      "meta-default": 10
+    },
+    "enableQuantity": {
+      "type": "boolean",
+      "meta-example": true
+    },
+    "copyToBack ": {
+      "type": "boolean",
+      "meta-example": true
+    },
+    "zoomEnabled": {
+      "type": "boolean",
+      "meta-description": "Defines whether zoom tool will be enabled inside designer.",
+      "meta-example": true
+    }
+  },
+  "required": [
+    "checkTextFXThrottle",
+    "showUploadedColorsDialog",
+    "showProductSelector",
+    "checkeredBackground",
+    "deleteOnDoubleClick",
+    "minDPU",
+    "includeProductInDesign",
+    "fontsCSSUrl",
+    "includeMaskInDesign",
+    "maxZoom",
+    "minZoom",
+    "unitConversionMult",
+    "enableSnapGuides",
+    "includePrintingAreaInDesign",
+    "unit2",
+    "zoomEnabled",
+    "unit"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

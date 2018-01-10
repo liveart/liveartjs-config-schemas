@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-06/schema#","title":"Color schema","type":"object","properties":{"name":{"type":"string"},"value":{"type":"string"},"groups":{"type":"array","contains":{"type":"string"}}},"required":["name","value"],"additionalProperties":false}

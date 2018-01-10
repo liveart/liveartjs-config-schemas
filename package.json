@@ -1,0 +1,10 @@
+{
+  "name": "lajs-schemas",
+  "version": "1.0.0",
+  "main": "buildSchemas.js",
+  "author": "liveart",
+  "license": "MIT",
+  "dependencies": {
+    "omit-deep": "^0.3.0"
+  }
+}
