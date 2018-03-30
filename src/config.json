@@ -30,7 +30,7 @@
           "meta-example": "config/colors.json"
         }
       },
-      "meta-description": "Object containing urls to the services to get Colors and optional pantones JSON structures from. These are colors for fonts and colorizable artworks. Added in v0.10.4, pantones are available for fonts and colorizable artworks, appear in color picker as a separate tab. To disable the Pantones feature — remove pantones_url property. Note: for colorizing multicolor products refer to Product List configuration."
+      "meta-description": "Object containing urls to the services to get Colors and optional pantones JSON structures. These are the colors for fonts and colorizable artwork. Added in v0.10.4, pantones are available for fonts and colorizable artwork, in color picker appear as a separate tab. To disable the Pantones feature — remove pantones_url property. Note: for colorizing multicolor products refer to Product List configuration."
     },
     "defaultNameObjectText": {
       "type": "string",
@@ -123,12 +123,6 @@
       "meta-description": "URL to a backend service which places order and redirects user to some other page, for meta-example, shopping cart.",
       "meta-example": "services/order.php?design_id=${design_id}"
     },
-    "saveTemplateUrl": {
-      "type": "string"
-    },
-    "getTemplatesUrl": {
-      "type": "string"
-    },
     "redirectWindow": {
       "type": "string",
       "enum": [
@@ -184,6 +178,16 @@
       "type": "string",
       "meta-description": "URL to a backend service that will upload user image from local file or URL. After uploading and processing the image is shown on the preview area and ready to be moved or resized. Allowed file extensions: .jpg, .png, .gif, .svg."
     },
+    "saveTemplateUrl": {
+      "type": "string",
+      "meta-description": "URL to a backend service which saves template designed in admin mode.",
+      "meta-example": "services/php/saveTemplate.php"
+    },
+    "getTemplatesUrl": {
+      "type": "string",
+      "meta-description": "URL to a backend service which returns template list.",
+      "meta-example": "services/php/getTemplates.php?product_id=${product_id}"
+    },
     "removeDesignUrl": {
       "type": "string",
       "meta-description": "Remove saved design"
@@ -202,10 +206,8 @@
     "assetsUrl",
     "graphicsList",
     "redirectUrl",
-    "defaultProductId",
     "uploadImageUrl",
     "social",
-    "getQuoteUrl",
     "shareLinkUrl",
     "options",
     "defaultNumberObjectText"

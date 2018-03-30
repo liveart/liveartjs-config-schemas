@@ -168,8 +168,7 @@
   },
   "required": [
     "product",
-    "locations",
-    "quantities"
+    "locations"
   ],
   "additionalProperties": true
 }

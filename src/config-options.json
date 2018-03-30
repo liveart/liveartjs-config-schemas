@@ -34,11 +34,7 @@
     },
     "fitEditableArea": {
       "type": "boolean",
-      "meta-example": false,
-      "meta-default": false
-    },
-    "showSuitableProductColorize": {
-      "type": "boolean",
+      "meta-description": "If true — process product.location.editableArea and product.location.clipRect in coordinate system of product image. *Added to v0.10.27*.",
       "meta-example": false,
       "meta-default": false
     },
@@ -120,11 +116,6 @@
       "meta-example": 10,
       "meta-default": 10
     },
-    "enableQuantity": {
-      "type": "boolean",
-      "meta-example": true,
-      "meta-default": true
-    },
     "copyToBack ": {
       "type": "boolean",
       "meta-example": true
@@ -133,6 +124,33 @@
       "type": "boolean",
       "meta-description": "Defines whether zoom tool will be enabled inside designer.",
       "meta-example": true
+    },
+    "enableQuantity": {
+      "type": "boolean",
+      "meta-description": "Defines whether quantity will be enabled inside designer.",
+      "meta-example": true
+    },
+    "enableCopyToBack": {
+      "type": "boolean",
+      "meta-description": "Defines whether 'Copy To Back' button will be enabled inside designer.",
+      "meta-example": false
+    },
+    "snapConfigs": {
+      "type": "object",
+      "properties": {
+        "snapToEditableArea": {
+          "type": "boolean",
+          "meta-description": "Defines weather snapping to editable area is turned on."
+        },
+        "snapToObjects": {
+          "type": "boolean",
+          "meta-description": "Defines weather snapping to other objects is turned on."
+        },
+        "snapRotation": {
+          "type": "boolean",
+          "meta-description": "Defines weather rotation snappin is turned on"
+        }
+      }
     }
   },
   "required": [
@@ -152,7 +170,6 @@
     "includePrintingAreaInDesign",
     "unit2",
     "zoomEnabled",
-    "enableQuantity",
     "unit"
   ],
   "type": "object",

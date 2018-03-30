@@ -129,9 +129,6 @@
           "mask": {
             "type": "string"
           },
-          "overlayInfo": {
-            "type": "string"
-          },
           "editableAreaUnitsRange": {
             "type": "array",
             "items": {
@@ -206,7 +203,8 @@
                   "type": "string"
                 }
               },
-              "type": "object"
+              "type": "object",
+              "additionalProperties": true
             },
             "type": "array"
           }
@@ -300,6 +298,9 @@
       "type": "number"
     },
     "enableQuantity": {
+      "type": "boolean"
+    },
+    "enableCopyToBack": {
       "type": "boolean"
     },
     "colorGroup": {
