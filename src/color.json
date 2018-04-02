@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Color schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "meta-description": "Name of the color visible to end-users"
+    },
+    "value": {
+      "type": "string",
+      "meta-description": "Hexadecimal value of the color"
+    },
+    "groups": {
+      "type": "array",
+      "contains": {
+        "type": "string",
+        "meta-description": "Name of a group that the color belongs to"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "value"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-06/schema#","title":"Product mask schema","properties":{"$schema":{"type":"string"},"productCategoriesList":{"items":{"$ref":"productCategory.json"},"type":"array"}},"type":"object","required":["productCategoriesList","$schema"],"additionalProperties":false}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Fonts mask schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "meta-description": "Reference to JSON Schema of the supported version"
+    },
+    "fonts": {
+      "type": "array",
+      "items": {
+        "$ref": "font.json"
+      }
+    }
+  },
+  "required": [
+    "fonts",
+    "$schema"
+  ],
+  "additionalProperties": false
+}

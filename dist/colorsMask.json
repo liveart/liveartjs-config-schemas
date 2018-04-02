@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-06/schema#","title":"Colors mask schema","type":"object","properties":{"$schema":{"type":"string"},"colors":{"type":"array","items":{"$ref":"color.json"}}},"required":["colors","$schema"],"additionalProperties":false}

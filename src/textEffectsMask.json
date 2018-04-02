@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Text effects mask schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "meta-description": "Reference to JSON Schema of the supported version"
+    },
+    "textEffects": {
+      "type": "array",
+      "items": {
+        "$ref": "textEffect.json"
+      }
+    }
+  },
+  "required": [
+    "textEffects",
+    "$schema"
+  ],
+  "additionalProperties": false
+}

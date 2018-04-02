@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Font schema",
+  "properties": {
+    "name": {
+      "type": "string",
+      "meta-description": "Name of the font visible to end-users"
+    },
+    "fontFamily": {
+      "type": "string"
+    },
+    "ascent": {
+      "type": "number"
+    },
+    "boldAllowed": {
+      "type": "boolean"
+    },
+    "italicAllowed": {
+      "type": "boolean"
+    },
+    "vector": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "fontFamily"
+  ],
+  "additionalProperties": false
+}
