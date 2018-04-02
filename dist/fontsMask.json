@@ -1,1 +1,1 @@
-{"$schema":"http://json-schema.org/draft-06/schema#","title":"Fonts mask schema","type":"object","properties":{"fonts":{"type":"array","items":{"$ref":"font.json"}}},"required":["fonts"],"additionalProperties":false}
+{"$schema":"http://json-schema.org/draft-06/schema#","title":"Fonts mask schema","type":"object","properties":{"$schema":{"type":"string"},"fonts":{"type":"array","items":{"$ref":"font.json"}}},"required":["fonts","$schema"],"additionalProperties":false}

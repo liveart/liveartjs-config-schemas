@@ -3,6 +3,10 @@
   "title": "Fonts mask schema",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string",
+      "meta-description": "Reference to JSON Schema of the supported version"
+    },
     "fonts": {
       "type": "array",
       "items": {
@@ -11,7 +15,8 @@
     }
   },
   "required": [
-    "fonts"
+    "fonts",
+    "$schema"
   ],
   "additionalProperties": false
 }

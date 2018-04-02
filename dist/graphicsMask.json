@@ -1,1 +1,1 @@
-{"$schema":"http://json-schema.org/draft-06/schema#","title":"Graphic mask schema","properties":{"graphicsCategoriesList":{"items":{"$ref":"graphicCategory.json"},"type":"array"}},"type":"object","required":["graphicsCategoriesList"],"additionalProperties":false}
+{"$schema":"http://json-schema.org/draft-06/schema#","title":"Graphic mask schema","properties":{"$schema":{"type":"string"},"graphicsCategoriesList":{"items":{"$ref":"graphicCategory.json"},"type":"array"}},"type":"object","required":["graphicsCategoriesList","$schema"],"additionalProperties":false}

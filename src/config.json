@@ -13,6 +13,10 @@
   ],
   "meta-description": "Either for its main configuration file or configurations for resources such as products and gallery images, LiveArt JS uses JSON format. The primary configuration file contains all the necessary options, as well as REST-like endpoints for server-side integration.",
   "properties": {
+    "$schema": {
+      "type": "string",
+      "meta-description": "Reference to JSON Schema of the supported version"
+    },
     "assetsUrl": {
       "type": "string",
       "meta-description": "Relative or absolute URL to the assets folder containing necessary css, image, and javascript files that make LiveArt HTML5 component work.",
@@ -210,7 +214,8 @@
     "social",
     "shareLinkUrl",
     "options",
-    "defaultNumberObjectText"
+    "defaultNumberObjectText",
+    "$schema"
   ],
   "type": "object",
   "additionalProperties": false
