@@ -11,7 +11,7 @@
       "link-id": "config.options"
     }
   ],
-  "meta-description": "Either for its main configuration file or configurations for resources such as products and gallery images, LiveArt JS uses JSON format. The primary configuration file contains all the necessary options, as well as REST-like endpoints for server-side integration.",
+  "meta-description": "Both for its main configuration file and resources configurations such as products and gallery images, LiveArt JS uses JSON format. The primary configuration file contains all the necessary options, as well as REST-like endpoints for server-side integration.",
   "properties": {
     "$schema": {
       "type": "string",
@@ -23,17 +23,27 @@
       "meta-example": "assets/"
     },
     "colors": {
-      "type": "object",
-      "properties": {
-        "pantones_url": {
-          "type": "string",
-          "meta-example": "config/pantones.json"
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "pantones_url": {
+              "type": "string",
+              "meta-example": "config/pantones.json"
+            },
+            "url": {
+              "type": "string",
+              "meta-example": "config/colors.json"
+            }
+          }
         },
-        "url": {
-          "type": "string",
-          "meta-example": "config/colors.json"
+        {
+          "type": "array",
+          "items": {
+            "$ref": "color.json"
+          }
         }
-      },
+      ],
       "meta-description": "Object containing urls to the services to get Colors and optional pantones JSON structures. These are the colors for fonts and colorizable artwork. Added in v0.10.4, pantones are available for fonts and colorizable artwork, in color picker appear as a separate tab. To disable the Pantones feature — remove pantones_url property. Note: for colorizing multicolor products refer to Product List configuration."
     },
     "defaultNameObjectText": {
@@ -60,15 +70,25 @@
       "meta-description": "*DEPRECATED* as of v0.10.24. Use \"laOptions.meta-defaultProductAttributes.sizeUnits\". Sets meta-default size in units if the meta-default product is resizable. (Note: has lower priority than \"product.locations.editableAreaUnits\")."
     },
     "fonts": {
-      "type": "object",
-      "properties": {
-        "url": {
-          "type": "string",
-          "meta-example": "config/fonts.json"
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "meta-example": "config/fonts.json"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "font.json"
+          }
         }
-      },
-      "required": [
-        "url"
       ],
       "meta-description": "Object containing url to the service to get Fonts JSON structure from."
     },
@@ -88,15 +108,25 @@
       "meta-example": "services/getQuote.php"
     },
     "graphicsList": {
-      "type": "object",
-      "properties": {
-        "url": {
-          "type": "string",
-          "meta-example": "config/graphics.json"
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "meta-example": "config/graphics.json"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        {
+          "items": {
+            "$ref": "graphicCategory.json"
+          },
+          "type": "array"
         }
-      },
-      "required": [
-        "url"
       ],
       "meta-description": "Object containing url to the service to get Graphics JSON structure from."
     },
@@ -110,16 +140,26 @@
       "$ref": "config-options.json"
     },
     "productsList": {
-      "properties": {
-        "url": {
-          "type": "string",
-          "meta-example": "config/products.json"
+      "oneOf": [
+        {
+          "properties": {
+            "url": {
+              "type": "string",
+              "meta-example": "config/products.json"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "items": {
+            "$ref": "productCategory.json"
+          },
+          "type": "array"
         }
-      },
-      "required": [
-        "url"
       ],
-      "type": "object",
       "meta-description": "Object containing url to the service to get Products JSON structure from."
     },
     "redirectUrl": {
@@ -149,33 +189,50 @@
       "meta-example": "services/order.php?design_id=${design_id}"
     },
     "social": {
-      "properties": {
-        "url": {
-          "type": "string",
-          "meta-example": "config/social.json"
+      "oneOf": [
+        {
+          "properties": {
+            "url": {
+              "type": "string",
+              "meta-example": "config/social.json"
+            }
+          },
+          "required": [
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "social.json"
         }
-      },
-      "required": [
-        "url"
       ],
-      "type": "object",
       "meta-description": "Object containing url to the service to get social networks configuration for uploading photos from. Added in v0.10.10."
     },
     "textEffects": {
-      "properties": {
-        "config": {
-          "type": "string",
-          "meta-example": "config/textEffects.json"
+      "oneOf": [
+        {
+          "properties": {
+            "config": {
+              "type": "string",
+              "meta-example": "config/textEffects.json"
+            },
+            "url_deprecated": {
+              "type": "string",
+              "meta-example": "config/deprecatedEffects.json"
+            }
+          },
+          "required": [
+            "config"
+          ],
+          "type": "object"
         },
-        "url_deprecated": {
-          "type": "string",
-          "meta-example": "config/deprecatedEffects.json"
+        {
+          "type": "array",
+          "items": {
+            "$ref": "textEffect.json"
+          }
         }
-      },
-      "required": [
-        "config"
       ],
-      "type": "object",
       "meta-description": "Object containing url to the service to get text effects configuration file from. See \"Data Structure\" section for details on using text effects. To disable the feature completely, leave both fields of the object empty."
     },
     "uploadImageUrl": {

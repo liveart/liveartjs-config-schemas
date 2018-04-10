@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-06/schema#","title":"social.json","properties":{"$schema":{"type":"string"},"instagramClientID":{"type":"string"},"facebookClientID":{"type":"string"},"flickrClientID":{"type":"string"},"googleClientID":{"type":"string"},"authorizedRedirectUrl":{"type":"string"}},"required":[],"type":"object","additionalProperties":false}
