@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://raw.githubusercontent.com/liveart/liveartjs-config-schemas/develop/service/design/ComplexArtDesign.schema.json",
   "title": "ComplexArtDesign",
   "type": "object",
   "version": "1.0",

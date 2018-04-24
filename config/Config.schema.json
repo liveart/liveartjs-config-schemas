@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://raw.githubusercontent.com/liveart/liveartjs-config-schemas/develop/config/Config.schema.json",
   "title": "Config",
   "description": "Both for its main configuration file and resources configurations such as products and gallery images, LiveArt JS uses JSON format. The primary configuration file contains all the necessary options, as well as REST-like endpoints for server-side integration.",
   "properties": {

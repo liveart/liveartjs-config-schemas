@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://raw.githubusercontent.com/liveart/liveartjs-config-schemas/develop/config/vo/Color.schema.json",
   "title": "Color",
   "type": "object",
   "properties": {
