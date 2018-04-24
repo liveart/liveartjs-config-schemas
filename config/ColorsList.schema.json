@@ -10,7 +10,7 @@
     "colors": {
       "type": "array",
       "items": {
-        "$ref": "Color.schema.json"
+        "$ref": "vo/Color.schema.json"
       }
     }
   },

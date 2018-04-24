@@ -9,7 +9,7 @@
     },
     "productCategoriesList": {
       "items": {
-        "$ref": "ProductCategory.schema.json"
+        "$ref": "vo/ProductCategory.schema.json"
       },
       "type": "array"
     }

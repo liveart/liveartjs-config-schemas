@@ -10,7 +10,7 @@
     "fonts": {
       "type": "array",
       "items": {
-        "$ref": "Font.schema.json"
+        "$ref": "vo/Font.schema.json"
       }
     }
   },

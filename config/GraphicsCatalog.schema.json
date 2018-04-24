@@ -9,7 +9,7 @@
     },
     "graphicsCategoriesList": {
       "items": {
-        "$ref": "GraphicCategory.schema.json"
+        "$ref": "vo/GraphicCategory.schema.json"
       },
       "type": "array"
     }

@@ -10,7 +10,7 @@
     "textEffects": {
       "type": "array",
       "items": {
-        "$ref": "TextEffect.schema.json"
+        "$ref": "vo/TextEffect.schema.json"
       }
     }
   },
