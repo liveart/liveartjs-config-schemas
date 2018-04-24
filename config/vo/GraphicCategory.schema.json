@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "GraphicCategory",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "thumb": {
+      "type": "string"
+    },
+    "graphicsList": {
+      "items": {
+        "$ref": "Graphic.schema.json"
+      },
+      "type": "array"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "$ref": "GraphicCategory.schema.json"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "additionalProperties": false
+}
+

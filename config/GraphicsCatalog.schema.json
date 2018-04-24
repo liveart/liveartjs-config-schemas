@@ -1,22 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Graphic mask schema",
+  "title": "GraphicsCatalog",
+  "type": "object",
   "properties": {
     "$schema": {
       "type": "string",
-      "meta-description": "Reference to JSON Schema of the supported version"
+      "description": "Reference to JSON Schema of the supported version"
     },
     "graphicsCategoriesList": {
       "items": {
-        "$ref": "graphicCategory.json"
+        "$ref": "GraphicCategory.schema.json"
       },
       "type": "array"
     }
   },
-  "type": "object",
   "required": [
-    "graphicsCategoriesList",
-    "$schema"
+    "graphicsCategoriesList"
   ],
   "additionalProperties": false
 }

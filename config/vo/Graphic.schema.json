@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Graphic schema",
+  "title": "Graphic",
+  "type": "object",
   "properties": {
     "id": {
       "type": "string",
@@ -84,7 +85,5 @@
     "categoryId",
     "image"
   ],
-  "type": "object",
   "additionalProperties": false
 }
-

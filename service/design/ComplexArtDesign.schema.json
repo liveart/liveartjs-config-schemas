@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Design schema",
+  "title": "ComplexArtDesign",
   "type": "object",
   "version": "1.0",
   "properties": {

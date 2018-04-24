@@ -1,22 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Colors mask schema",
+  "title": "ColorsList",
   "type": "object",
   "properties": {
     "$schema": {
       "type": "string",
-      "meta-description": "Reference to JSON Schema of the supported version"
+      "description": "Reference to JSON Schema of the supported version"
     },
     "colors": {
       "type": "array",
       "items": {
-        "$ref": "color.json"
+        "$ref": "Color.schema.json"
       }
     }
   },
   "required": [
-    "colors",
-    "$schema"
+    "colors"
   ],
   "additionalProperties": false
 }

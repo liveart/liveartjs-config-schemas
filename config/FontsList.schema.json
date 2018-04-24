@@ -1,22 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Text effects mask schema",
+  "title": "FontsList",
   "type": "object",
   "properties": {
     "$schema": {
       "type": "string",
-      "meta-description": "Reference to JSON Schema of the supported version"
+      "description": "Reference to JSON Schema of the supported version"
     },
-    "textEffects": {
+    "fonts": {
       "type": "array",
       "items": {
-        "$ref": "textEffect.json"
+        "$ref": "Font.schema.json"
       }
     }
   },
   "required": [
-    "textEffects",
-    "$schema"
+    "fonts"
   ],
   "additionalProperties": false
 }

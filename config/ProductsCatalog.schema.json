@@ -1,22 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Product mask schema",
+  "title": "ProductsCatalog",
+  "type": "object",
   "properties": {
     "$schema": {
       "type": "string",
-      "meta-description": "Reference to JSON Schema of the supported version"
+      "description": "Reference to JSON Schema of the supported version"
     },
     "productCategoriesList": {
       "items": {
-        "$ref": "productCategory.json"
+        "$ref": "ProductCategory.schema.json"
       },
       "type": "array"
     }
   },
-  "type": "object",
   "required": [
-    "productCategoriesList",
-    "$schema"
+    "productCategoriesList"
   ],
   "additionalProperties": false
 }

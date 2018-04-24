@@ -1,11 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "social.json",
-  "meta-description": "Social configuration",
+  "title": "Social",
+  "description": "Social configuration",
+  "type": "object",
   "properties": {
     "$schema": {
       "type": "string",
-      "meta-description": "Reference to JSON Schema of the supported version"
+      "description": "Reference to JSON Schema of the supported version"
     },
     "instagramClientID": {
       "type": "string"
@@ -24,6 +25,5 @@
     }
   },
   "required": [],
-  "type": "object",
   "additionalProperties": false
 }

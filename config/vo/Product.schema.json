@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Product schema",
+  "title": "Product",
+  "type": "object",
   "properties": {
     "id": {
       "type": "string"
@@ -322,7 +323,6 @@
       }
     }
   },
-  "type": "object",
   "required": [
     "id",
     "categoryId",
@@ -332,4 +332,3 @@
   ],
   "additionalProperties": false
 }
-

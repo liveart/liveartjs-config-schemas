@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "ConfigOptions",
+  "type": "object",
+  "properties": {
+    "checkTextFXThrottle": {
+      "type": "number",
+      "description": "Delay in *milliseconds* for typing text events, before LiveArt will trigger a server script to obtain new image for certain raster effect.",
+      "examples": [400],
+      "default": 400
+    },
+    "checkeredBackground": {
+      "type": "boolean",
+      "description": "If enabled, shows checkered background where no product background is rendered. The asset for background is located in assets/img/bg-fill.png.",
+      "examples": [true],
+      "default": true
+    },
+    "deleteOnDoubleClick": {
+      "type": "boolean",
+      "description": "Defines whether user can remove any object from working area by simple double-click or double tap (for mobile devices).",
+      "examples": [false],
+      "default": false
+    },
+    "enableSnapGuides": {
+      "type": "boolean",
+      "description": "Enables snapping objects while dragging to another objects, editable area center or sides. Also helps to set object's rotation angle to 0°, 90°, 180°, and 270°. *Added to v0.10.17.*",
+      "examples": [true],
+      "default": true
+    },
+    "fitProductImage": {
+      "type": "boolean",
+      "description": "Defines if product images should be fitted and centered in the canvas. Small product images are only centered. Editable Area coordinates are still bound to the canvas dimensions (not product image). *Added to v0.10.5*.",
+      "examples": [false],
+      "default": false
+    },
+    "fitEditableArea": {
+      "type": "boolean",
+      "description": "If true — process product.location.editableArea and product.location.clipRect in coordinate system of product image. *Added to v0.10.27*.",
+      "examples": [false],
+      "default": false
+    },
+    "fontsCSSUrl": {
+      "type": "string",
+      "description": "URL to the location of the fonts CSS definitions that will be available for the user. Used for a stand-alone SVG preview (for proper text fonts rendering in browser).",
+      "examples": ["/fonts/fonts.css"],
+      "default": "\"\""
+    },
+    "includeMaskInDesign": {
+      "type": "boolean",
+      "description": "Defines whether product locations mask are included in the output mockup of design. **Warning**: *true* is recommended, otherwise image will be hidden (display=\"none\"), but some software (e.g. ImageMagic) will ignore this fact. Alternative way — remove manually node with id=\"productMask\"",
+      "examples": [false],
+      "default": false
+    },
+    "includePrintingAreaInDesign": {
+      "type": "boolean",
+      "description": "Defines whether constraints of an area available for printing are included in the output mockup of design.",
+      "examples": [false],
+      "default": false
+    },
+    "includeProductInDesign": {
+      "type": "boolean",
+      "description": "Defines whether product background image is included into output mockup of the design. **Warning**: *true* is a recommended value, otherwise image will be hidden (display=\"none\"), but some software (e.g. ImageMagic) will ignore this fact.Alternate way — remove manually node with id=\"productImage\".",
+      "examples": [false],
+      "default": false
+    },
+    "minDPU": {
+      "type": "number",
+      "description": "Warning message that will be shown to a user on raster image resize more than safe dimensions to meet suggested print quality standards. Also this feature requires *editableArea* and *editableAreaUnits* (see *Product Location Object*) for each product location to use this feature (for correct unit/pixel ratio). Warning message is configured in html (‘#dpu-exceeded-popup’). If user ignores such warning and continues design editing - on Place Order will fire additional pop-up. Also may be re-defined for certain products (see *Product Object*).",
+      "examples": [0],
+      "default": 0
+    },
+    "minZoom": {
+      "type": "number",
+      "description": "Defines min value for zoom control, will be used as percents.",
+      "examples": [50],
+      "default": 50
+    },
+    "maxZoom": {
+      "type": "number",
+      "description": "Defines max value for zoom control, will be used as percents.",
+      "examples": [150],
+      "default": 150
+    },
+    "zoomStep": {
+      "type": "number",
+      "description": "Defines step for zoom control, will be used as percents.",
+      "examples": [10],
+      "default": 10
+    },
+    "showProductSelector": {
+      "type": "boolean",
+      "description": "Defines whether Select Product form is shown. If false, make sure you indicate the *defaultProductId* to preload the product.",
+      "examples": [true],
+      "default": true
+    },
+    "showUploadedColorsDialog": {
+      "type": "boolean",
+      "description": "Defines whether to show a pop-up with color choices for uploaded image (default palette and 'Process Colors' checkbox). If *false*, uploaded images are treated as 'Process Colors'.",
+      "examples": [true],
+      "default": true
+    },
+    "unit": {
+      "type": "string",
+      "description": "Units shown for custom sizes products.",
+      "examples": ["in"],
+      "default": "\"\""
+    },
+    "unit2": {
+      "type": "string",
+      "description": "Units shown for custom sizes products.",
+      "examples": ["ft"],
+      "default": "\"\""
+    },
+    "unitConversionMult": {
+      "type": "number",
+      "description": "Indicates respective multiplier for proper conversion of unit to unit2.",
+      "examples": [10],
+      "default": 10
+    },
+    "copyToBack ": {
+      "type": "boolean",
+      "examples": [true]
+    },
+    "zoomEnabled": {
+      "type": "boolean",
+      "description": "Defines whether zoom tool will be enabled inside designer.",
+      "examples": [true]
+    },
+    "enableQuantity": {
+      "type": "boolean",
+      "description": "Defines whether quantity will be enabled inside designer.",
+      "examples": [true]
+    },
+    "enableCopyToBack": {
+      "type": "boolean",
+      "description": "Defines whether 'Copy To Back' button will be enabled inside designer.",
+      "examples": [false]
+    },
+    "snapConfigs": {
+      "type": "object",
+      "properties": {
+        "snapToEditableArea": {
+          "type": "boolean",
+          "description": "Defines weather snapping to editable area is turned on."
+        },
+        "snapToObjects": {
+          "type": "boolean",
+          "description": "Defines weather snapping to other objects is turned on."
+        },
+        "snapRotation": {
+          "type": "boolean",
+          "description": "Defines weather rotation snappin is turned on"
+        }
+      }
+    }
+  },
+  "required": [
+    "checkTextFXThrottle",
+    "showUploadedColorsDialog",
+    "showProductSelector",
+    "checkeredBackground",
+    "deleteOnDoubleClick",
+    "minDPU",
+    "includeProductInDesign",
+    "fontsCSSUrl",
+    "includeMaskInDesign",
+    "maxZoom",
+    "minZoom",
+    "unitConversionMult",
+    "enableSnapGuides",
+    "includePrintingAreaInDesign",
+    "unit2",
+    "zoomEnabled",
+    "unit"
+  ],
+  "additionalProperties": false
+}
